@@ -1,4 +1,4 @@
-# yec-tools - an npm package for developing web apps with ycash
+# yec-toolkit - an npm package for developing web apps with ycash
 
 
 ## Installation
@@ -8,7 +8,7 @@
 The package can be installed at the command line with
 
 ```
-npm install yec-tools
+npm install yec-toolkit
 ```
 
 ### Development
