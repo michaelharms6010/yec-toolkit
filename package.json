@@ -1,0 +1,23 @@
+{
+  "name": "yec-toolkit",
+  "version": "0.1.0",
+  "description": "Ycash web app tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelharms6010/yec-toolkit.git"
+  },
+  "keywords": [
+    "ycash",
+    "YEC"
+  ],
+  "author": "Michael Harms",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaelharms6010/yec-toolkit/issues"
+  },
+  "homepage": "https://github.com/michaelharms6010/yec-toolkit#readme"
+}
