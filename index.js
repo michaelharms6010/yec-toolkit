@@ -1,5 +1,6 @@
 const yaddrRegex = /^ys[a-z0-9]{76}$/;
 const saddrRegex = /^s1[AC-HJ-NP-Zac-hj-np-z02-9]{33}$/;
+const axios = require("axios")
 
 
 exports.isValidYaddr = function(yaddr) {
@@ -29,7 +30,9 @@ exports.yecToYat = function(f) {
 exports.price = async function(currency = "usd") {
     try {
         res = await axios.get("https://api.coingecko.com/api/v3/coins/ycash")
-        return +res.data.market_data.current_price[currency.toLowerCase()].toFixed(2)
+        // if it's btc
+        price = +res.data.market_data.current_price[currency.toLowerCase()]
+        return /^btc$/i.test(currency) ? price : +price.toFixed(2)
     } catch {
         console.log("Error accessing price info")
     }
