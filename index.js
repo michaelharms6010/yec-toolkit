@@ -1,5 +1,5 @@
 const yaddrRegex = /^ys[a-z0-9]{76}$/;
-const saddrRegex = /^s1[AC-HJ-NP-Zac-hj-np-su-z02-9]{33}$/;
+const saddrRegex = /^s1[AC-HJ-NP-Zac-hj-np-z02-9]{33}$/;
 
 
 exports.isValidYaddr = function(yaddr) {
@@ -14,12 +14,24 @@ exports.isValidAddress = function(address) {
     return saddrRegex.test(address) || yaddrRegex.test(address)
 }
 
-// the three above functions are untested
+exports.isValidAddress = function(address) {
+    return taddrRegex.test(address) || zaddrRegex.test(address)
+}
 
-// TODO: sendmany generator
-// Lite wallet CLI send generator
-// Burner address generator
-// Memo splitter
-// Block info grabber
-// Yatoshi to YEC
-// YEC to Yatoshi
+exports.yatToYec = function(i) {
+    return +(i / 100000000).toFixed(8)
+}
+
+exports.yecToYat = function(f) {
+    return f * 100000000
+}
+
+exports.price = async function(currency = "usd") {
+    try {
+        res = await axios.get("https://api.coingecko.com/api/v3/coins/ycash")
+        return +res.data.market_data.current_price[currency.toLowerCase()].toFixed(2)
+    } catch {
+        console.log("Error accessing price info")
+    }
+    // Should this return a string or a float?
+}

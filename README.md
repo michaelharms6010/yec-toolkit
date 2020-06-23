@@ -13,3 +13,13 @@ npm install yec-tools
 
 ### Development
 
+#### TODO: sendmany generator
+- [ ] Lite wallet CLI send generator
+- [ ] z_sendmany generator
+- [ ] Burner saddress generator
+- [ ] Memo splitter
+- [ ] Block info grabber
+- [ ] Get Price info
+- [ ] Yatoshi to YEC
+- [ ] YEC to Yatoshi
+- [ ] Build robust test suite
