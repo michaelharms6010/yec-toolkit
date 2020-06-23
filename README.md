@@ -19,7 +19,8 @@ npm install yec-toolkit
 - [ ] Burner saddress generator
 - [ ] Memo splitter
 - [ ] Block info grabber
-- [ ] Get Price info
-- [ ] Yatoshi to YEC
-- [ ] YEC to Yatoshi
+- [x] Get Price info
+- [x] Yatoshi to YEC
+- [x] YEC to Yatoshi
 - [ ] Build robust test suite
+- [ ] Add examples to documentation

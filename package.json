@@ -1,6 +1,6 @@
 {
   "name": "yec-toolkit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Ycash web app tools",
   "main": "index.js",
   "scripts": {
