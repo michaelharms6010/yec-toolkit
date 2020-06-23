@@ -3,7 +3,7 @@
 
 ## Installation
 
-- [ ] TODO: Add cdn
+- [ ] TODO: Host / add cdn link ?
 
 The package can be installed at the command line with
 
