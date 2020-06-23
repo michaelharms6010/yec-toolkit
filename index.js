@@ -6,7 +6,7 @@ exports.isValidYaddr = function(yaddr) {
     return yaddrRegex.test(yaddr)
 }
 
-exports.isValidsaddr = function(saddr) {
+exports.isValidSaddr = function(saddr) {
     return saddrRegex.test(saddr)
 }
 
