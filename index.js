@@ -30,11 +30,11 @@ exports.yecToYat = function(f) {
 exports.price = async function(currency = "usd") {
     try {
         res = await axios.get("https://api.coingecko.com/api/v3/coins/ycash")
-        // if it's btc
         price = +res.data.market_data.current_price[currency.toLowerCase()]
         return /^btc$/i.test(currency) ? price : +price.toFixed(2)
+        // Should this round fiat currencies? Seems like it should be an option somewhere, use cases for round / not rounded 
     } catch {
         console.log("Error accessing price info")
     }
-    // Should this return a string or a float?
+    
 }
