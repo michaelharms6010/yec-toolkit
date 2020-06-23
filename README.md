@@ -13,7 +13,7 @@ npm install yec-toolkit
 
 ### Development
 
-#### TODO: sendmany generator
+#### TODO:
 - [ ] Lite wallet CLI send generator
 - [ ] z_sendmany generator
 - [ ] Burner saddress generator
