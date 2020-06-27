@@ -16,7 +16,7 @@ npm install yec-toolkit
 #### TODO:
 - [ ] Lite wallet CLI send generator
 - [ ] z_sendmany generator
-- [ ] Burner saddress generator
+- [ ] Burn saddress generator
 - [ ] Memo splitter
 - [ ] Block info grabber
 - [x] Get Price info

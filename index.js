@@ -37,3 +37,17 @@ exports.price = async function(currency = "btc") {
     }
     
 }
+
+exports.getBurner = _ => {
+    dictionary = []
+    for (let i = 65; i < 108; i++) {
+        dictionary.push(String.fromCharCode(i))
+    }
+    const head = "s1"
+    middle = "burnaddress"
+    // tail = [*("A"),*('C'..'H'),*("J".."N"),*("P".."Z"), *("a"),*('c'..'h'),*("j".."n"),*("p".."z"),*('0'),*("2".."9")].shuffle[0,9].join
+    
+    taddr = (head + middle + tail)
+
+
+}
