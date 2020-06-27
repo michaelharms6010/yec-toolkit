@@ -24,3 +24,16 @@ YEC.price().then(r => {
         })
     })
 })
+
+// Burn address testing - Should return a valid transparent address
+const newSaddr = YEC.getBurnAddress()
+
+assert.equal(newSaddr.length, 35)
+assert.equal(["o","O","b","B","I","i"].filter(item => !newSaddr.includes(item)).length, 6)
+
+
+
+
+
+
+    

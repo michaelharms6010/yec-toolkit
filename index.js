@@ -38,16 +38,15 @@ exports.price = async function(currency = "btc") {
     
 }
 
-exports.getBurner = _ => {
-    dictionary = []
-    for (let i = 65; i < 108; i++) {
-        dictionary.push(String.fromCharCode(i))
+exports.getBurnAddress = _ => {
+    dictionary = "ACDEFGHJKLMNPQRUVWXYZacdefghjklmnpqruvwxyz023456789"
+    let tail = ""
+    for (let i = 0; i < 23; i++) {
+        tail += dictionary[Math.floor(Math.random() * dictionary.length)]
     }
     const head = "s1"
-    middle = "burnaddress"
-    // tail = [*("A"),*('C'..'H'),*("J".."N"),*("P".."Z"), *("a"),*('c'..'h'),*("j".."n"),*("p".."z"),*('0'),*("2".."9")].shuffle[0,9].join
-    
-    taddr = (head + middle + tail)
-
+    const middle = "newfurnace"
+    saddr = (head + middle + tail)
+    return saddr
 
 }
