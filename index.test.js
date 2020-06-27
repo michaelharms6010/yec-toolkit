@@ -31,6 +31,7 @@ for (let i = 0; i < 200; i++) {
     assert.equal(newSaddr.length, 35)
     assert.equal(["o","O","b","B","I","i"].filter(item => !newSaddr.includes(item)).length, 6)
     assert.ok(YEC.isValidSaddr(newSaddr))
+    assert.ok(YEC.isValidAddress(newSaddr))
 }
 
 

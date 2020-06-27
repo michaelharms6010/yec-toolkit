@@ -15,9 +15,6 @@ exports.isValidAddress = function(address) {
     return saddrRegex.test(address) || yaddrRegex.test(address)
 }
 
-exports.isValidAddress = function(address) {
-    return taddrRegex.test(address) || zaddrRegex.test(address)
-}
 
 exports.yatToYec = function(i) {
     return +(i / 100000000).toFixed(8)
