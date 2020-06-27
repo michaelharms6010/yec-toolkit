@@ -15,9 +15,6 @@ exports.isValidAddress = function(address) {
     return saddrRegex.test(address) || yaddrRegex.test(address)
 }
 
-exports.isValidAddress = function(address) {
-    return taddrRegex.test(address) || zaddrRegex.test(address)
-}
 
 exports.yatToYec = function(i) {
     return +(i / 100000000).toFixed(8)
@@ -27,7 +24,7 @@ exports.yecToYat = function(f) {
     return f * 100000000
 }
 
-exports.price = async function(currency = "usd") {
+exports.price = async function(currency = "btc") {
     try {
         res = await axios.get("https://api.coingecko.com/api/v3/coins/ycash")
         return +res.data.market_data.current_price[currency.toLowerCase()]
@@ -36,4 +33,17 @@ exports.price = async function(currency = "usd") {
         console.log("Error accessing price info")
     }
     
+}
+
+exports.getBurnAddress = _ => {
+    dictionary = "ACDEFGHJKLMNPQRUVWXYZacdefghjklmnpqruvwxyz023456789"
+    let tail = ""
+    for (let i = 0; i < 23; i++) {
+        tail += dictionary[Math.floor(Math.random() * dictionary.length)]
+    }
+    const head = "s1"
+    const middle = "newfurnace"
+    saddr = (head + middle + tail)
+    return saddr
+
 }
