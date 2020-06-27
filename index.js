@@ -27,7 +27,7 @@ exports.yecToYat = function(f) {
     return f * 100000000
 }
 
-exports.price = async function(currency = "usd") {
+exports.price = async function(currency = "btc") {
     try {
         res = await axios.get("https://api.coingecko.com/api/v3/coins/ycash")
         return +res.data.market_data.current_price[currency.toLowerCase()]
